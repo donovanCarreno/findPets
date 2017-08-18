@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import * as actions from '../actions'
 
-export default function App() {
-  return (
-    <h1>Hello World!</h1>
-  )
+class App extends Component {
+  componentDidMount() {
+    this.props.getPets()
+  }
+
+  render() {
+    return (
+      <h1>Hello World!</h1>
+    )
+  }
 }
+
+export default connect(null, actions)(App)
