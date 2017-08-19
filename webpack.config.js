@@ -15,6 +15,10 @@ module.exports = {
         options: {
           presets: ["env", "react"]
         }
+      },
+      {
+        use: ['style-loader', 'css-loader'],
+        test: /\.css$/
       }
     ]
   },
