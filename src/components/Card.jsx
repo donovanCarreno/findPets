@@ -33,7 +33,7 @@ export default class Card extends Component {
     const { pet } = this.props
     return (
       <Wrapper>
-        <Image className='pet-image' src={this.findImage(pet.media.photos.photo)} />
+        <Image className='pet-image' src={this.findImage(pet.media.photos ? pet.media.photos.photo : [])} />
         <Truncate
           lines={4}
           ellipsis={<span>... Read More</span>}
